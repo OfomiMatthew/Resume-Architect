@@ -3,13 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ATS Resume Architect</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>ATS Resume Architect | AI Resume Optimizer</title>
+    <meta name="description" content="Optimize your resume for ATS algorithms with AI. Compare your resume against job descriptions for free." />
+    
+    <!-- Load Tailwind CSS via CDN for standalone deployment -->
+    <!-- Note: This is the Play CDN. The 'should not be used in production' warning in the console 
+         is expected for this architecture and can be safely ignored. It is required for the 
+         app to style correctly without a backend build step. -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    
+    <!-- Configure Tailwind to match our font stack explicitly -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              primary: '#4f46e5', // Indigo 600
+            }
+          }
+        }
+      }
+    </script>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
       body {
         font-family: 'Inter', sans-serif;
         background-color: #f8fafc;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
       /* Custom scrollbar for better aesthetics */
       ::-webkit-scrollbar {
