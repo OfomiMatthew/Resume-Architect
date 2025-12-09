@@ -1,0 +1,5 @@
+{
+  "name": "ATS Resume Architect",
+  "description": "An intelligent ATS resume checker and analyzer that compares your resume against job descriptions to optimize your hiring chances.",
+  "requestFramePermissions": []
+}
